@@ -6,6 +6,32 @@
   <title>Art Galaxy Universe</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
+    .menu-btn {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: inherit;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
       .image-gallery {
         display: flex;
         flex-wrap: wrap;
@@ -218,80 +244,80 @@
   </style>
 </head>
 <body>
-  <div class="image-gallery">
-    <img src="/images/070c7949-6928-4cf1-b273-cba83ace37cf.jpg" alt="Image 1" class="zoom-img">
-    <img src="/images/6991228c-45b1-4d97-a635-f458153d3468.jpg" alt="Image 2" class="zoom-img">
-    <img src="/images/e809eaf5-7a0b-461b-8b2e-fa248a97e8f8.jpg" alt="Image 3" class="zoom-img">
-    <img src="/images/c2bf153f-c9cf-4444-95d9-8f96c4b2b3b3.jpg" alt="Image 4" class="zoom-img">
-    <img src="/images/3478ad33-96f2-436f-92a1-a759ab95ca27.jpg" alt="Image 5" class="zoom-img">
-  </div>
   <nav>
     <div class="logo">Art Galaxy</div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#shop">Shop</a></li>
-      <li><a href="#extra">More</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="toggle-dark" onclick="toggleDark()">🌙</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
   </nav>
 
   <header>
     <h1>Welcome to Art Galaxy</h1>
     <p>Where colors, culture, and creativity unite.</p>
   </header>
+  <br><br><br><br><br><br><br><br>
 
   <section id="about">
     <h2 class="section-title">About Us</h2>
     <p>We are a passionate team creating traditional and modern art forms like Terracotta, Resin, and Rangoli. Every piece is handmade and tells a story of love and beauty.</p>
   </section>
-
-  <section id="team">
-    <h2 class="section-title">Meet the Team</h2>
-    <div class="team-grid">
-      <div class="team-card">Aayushman Chaddha</div>
-      <div class="team-card">Akshaj Tyagi</div>
-      <div class="team-card">Paarth Upadhya</div>
-      <div class="team-card">Aurva Patil</div>
-      <div class="team-card">Shlok Kartik</div>
-      <div class="team-card">Sagnik Ghosh</div>
-    </div>
-  </section>
+  <br><br><br><br><br><br><br><br>
+<div class="team-grid">
+  <div class="team-card">
+    <img src="images/Akshaj.jpg" alt="Akshaj Tyagi" class="zoom-img" />
+    <p>Akshaj Tyagi</p>
+  </div>
+  <div class="team-card">
+    <img src="images/Aurva.jpg" alt="Aurva Patil" class="zoom-img" />
+    <p>Aurva Patil</p>
+  </div>
+  <div class="team-card">
+    <img src="images/Sagnik.jpg" alt="Sagnik Ghosh" class="zoom-img" />
+    <p>Sagnik Ghosh</p>
+  </div>
+  <div class="team-card">
+    <img src="images/Shlok.jpg" alt="Shlok Kartik" class="zoom-img" />
+    <p>Shlok Kartik</p>
+  </div>
+  <div class="team-card">
+    <img src="images/Aayush.jpg" alt="Aayushman Chaddha" class="zoom-img" />
+    <p>Aayushman Chaddha</p>
+  </div>
+  <div class="team-card" style="justify-self: center;">
+    <!-- No image for Paarth yet -->
+    <div style="width: 180px; height: 180px; background: #eee; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.1em; color: #666;">Coming Soon</div>
+    <p>Paarth Upadhya</p>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
 <section id="shop">
   <h2 class="section-title">Our Artworks</h2>
   <div class="shop-grid">
     <div class="product">
-      <img src="https://via.placeholder.com/300x200/FFE0B2/000000?text=Terracotta+Art" width="100%" />
+      <img src="/images/skibidi2.jpg" width="100%" />
       <h3>Terracotta Art</h3>
       <p>Stock: 3</p>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/300x200/FFCDD2/000000?text=Rangoli" width="100%" />
+      <img src="/images/media.jpeg" width="100%" />
       <h3>Rangoli</h3>
       <p>Stock: 5</p>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/300x200/C8E6C9/000000?text=Resin+Art" width="100%" />
+      <img src="/images/resin.png" width="100%" />
       <h3>Resin Art</h3>
       <p>Stock: 4</p>
-    </div>
-    <div class="product out-of-stock">
-      <img src="https://via.placeholder.com/300x200/E1BEE7/000000?text=Mandala" width="100%" />
-      <h3>Mandala</h3>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200/B3E5FC/000000?text=Canvas+Splash" width="100%" />
-      <h3>Canvas Splash</h3>
-    </div>
-    <div class="product out-of-stock">
-      <img src="https://via.placeholder.com/300x200/FFCCBC/000000?text=Ink+Splash" width="100%" />
-      <h3>Ink Splash</h3>
     </div>
   </div>
 </section>
 
-
+  <br><br><br><br><br><br><br><br>
   <section id="contact">
     <h2 class="section-title">Contact Us To Order</h2>
     <div class="contact">
@@ -306,6 +332,9 @@
   <script>
     function toggleDark() {
       document.body.classList.toggle('dark-mode');
+    }
+      function toggleMenu() {
+        document.querySelector('nav ul').classList.toggle('show');
     }
   </script>
 </body>
