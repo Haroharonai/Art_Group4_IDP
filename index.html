@@ -6,6 +6,28 @@
   <title>Art Galaxy Universe</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .zoom-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+    }
+
+    .zoom-img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
     * {
       margin: 0;
       padding: 0;
@@ -170,9 +192,39 @@
     .dark-mode .extra-tab {
       background: #2a2a2a;
     }
+      .product img {
+      transition: transform 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
+    }
+
+    .product {
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="image-gallery">
+    <img src="/images/070c7949-6928-4cf1-b273-cba83ace37cf.jpg" alt="Image 1" class="zoom-img">
+    <img src="/images/6991228c-45b1-4d97-a635-f458153d3468.jpg" alt="Image 2" class="zoom-img">
+    <img src="/images/e809eaf5-7a0b-461b-8b2e-fa248a97e8f8.jpg" alt="Image 3" class="zoom-img">
+    <img src="/images/c2bf153f-c9cf-4444-95d9-8f96c4b2b3b3.jpg" alt="Image 4" class="zoom-img">
+    <img src="/images/3478ad33-96f2-436f-92a1-a759ab95ca27.jpg" alt="Image 5" class="zoom-img">
+  </div>
   <nav>
     <div class="logo">Art Galaxy</div>
     <ul>
